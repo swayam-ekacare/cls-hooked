@@ -15,9 +15,9 @@ initLogger();
 
 app.get('/:abc', setRequestInfo, helloWorldHandler);
 
-app.post('/:abc', (req, res) => {
-  console.log(req.body)
-  res.send('Hello world');
+app.post('/:abc', setRequestInfo, (req, res) => {
+  console.log('Hello world from POST route');
+  res.send("hello world")
 });
 
 app.listen(port, () => {
