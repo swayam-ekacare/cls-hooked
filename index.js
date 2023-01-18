@@ -13,9 +13,11 @@ app.use(attachContext);
 
 initLogger();
 
-app.get('/:abc', setRequestInfo, helloWorldHandler);
+app.all('*', setRequestInfo)
 
-app.post('/:abc', setRequestInfo, (req, res) => {
+app.get('/:abc', helloWorldHandler);
+
+app.post('/:abc', (req, res) => {
   console.log('Hello world from POST route');
   res.send("hello world")
 });

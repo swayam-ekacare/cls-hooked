@@ -11,10 +11,14 @@ export const attachContext = (req, res, next) => {
   })
 };
   
+let excludedRoutes = []
+
 export const setRequestInfo = (req, res, next) => {
-  applicationNamespace.set(REQUEST_PARAMS, req.params);
-  applicationNamespace.set(REQUEST_BODY, req.body);
-  applicationNamespace.set(REQUEST_METHOD, req.method);
+  if(!excludedRoutes.includes(req.path)) {
+    applicationNamespace.set(REQUEST_PARAMS, req.params);
+    applicationNamespace.set(REQUEST_BODY, req.body);
+    applicationNamespace.set(REQUEST_METHOD, req.method);
+  }
   next();
 };
   
