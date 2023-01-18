@@ -3,7 +3,7 @@ import fetch from "node-fetch"
 (function () {
     const req1 = fetch("http://localhost:3010/abc", { 
         method: 'POST', 
-        body: JSON.stringify({ a: "AAAAA" }), 
+        body: JSON.stringify({ a: "This is the request body" }), 
         headers: {
            "Content-Type": "application/json"
         }
