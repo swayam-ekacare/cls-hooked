@@ -1,0 +1,17 @@
+{"Message":"Example app listening at http://localhost:3010","Level":"info"}
+{"Id":"c76d000a-4e99-46b9-80c9-92a12b429716","Message":"Hello world from POST route","Level":"info","Request Params":{"0":"/abc"},"Request Body":{"a":"This is the request body"},"Request Method":"POST"}
+{"Id":"e44ced9d-178b-4ec5-9062-25456e5d3bd0","Message":"This is a hello world log message.","Level":"info","Request Params":{"0":"/abc"},"Request Body":{},"Request Method":"GET"}
+{"Id":"e44ced9d-178b-4ec5-9062-25456e5d3bd0","Message":"This is a nested handler.","Level":"info","Request Params":{"0":"/abc"},"Request Body":{},"Request Method":"GET"}
+{"Message":"Example app listening at http://localhost:3010","Level":"info"}
+{"Id":"5968db6d-1e0a-49e2-b927-193e44414d0b","Message":"Hello world from POST route","Level":"info","Request Params":{"0":"/abc"},"Request Body":{"a":"This is the request body"},"Request Method":"POST"}
+{"Id":"1a546d88-cc56-437e-b316-d0993408d20f","Message":"This is a hello world log message.","Level":"info","Request Params":{"0":"/abc"},"Request Body":{},"Request Method":"GET"}
+{"Id":"1a546d88-cc56-437e-b316-d0993408d20f","Message":"This is a nested handler.","Level":"info","Request Params":{"0":"/abc"},"Request Body":{},"Request Method":"GET"}
+{"Id":"af769d94-8396-4752-a795-933caf65fccb","Message":"Hello world from POST route","Level":"info","Request Params":{},"Request Body":{"a":"This is the request body"},"Request Method":"POST"}
+{"Id":"22767582-b461-450f-aec7-85fb4f3fd4eb","Message":"This is a hello world log message.","Level":"info","Request Params":{},"Request Body":{},"Request Method":"GET"}
+{"Id":"22767582-b461-450f-aec7-85fb4f3fd4eb","Message":"This is a nested handler.","Level":"info","Request Params":{},"Request Body":{},"Request Method":"GET"}
+{"Id":"46f7e710-ef88-458c-9c87-8a36c46363b4","Message":"Hello world from POST route","Level":"info","Request Params":{},"Request Body":{"a":"This is the request body"},"Request Method":"POST"}
+{"Id":"b678bcc0-0c0b-4146-9c41-a24a9fe5fb87","Message":"This is a hello world log message.","Level":"info","Request Params":{},"Request Body":{},"Request Method":"GET"}
+{"Id":"b678bcc0-0c0b-4146-9c41-a24a9fe5fb87","Message":"This is a nested handler.","Level":"info","Request Params":{},"Request Body":{},"Request Method":"GET"}
+{"Id":"5b10ec10-478b-4944-b000-1e866457d977","Message":"Hello world from POST route","Level":"info","timestamp":"2023-01-24T07:39:31.313Z","Request Params":{},"Request Body":{"a":"This is the request body"},"Request Method":"POST"}
+{"Id":"612df7b2-44a5-4f28-b5c1-7643e575687b","Message":"This is a hello world log message.","Level":"info","timestamp":"2023-01-24T07:39:31.325Z","Request Params":{},"Request Body":{},"Request Method":"GET"}
+{"Id":"612df7b2-44a5-4f28-b5c1-7643e575687b","Message":"This is a nested handler.","Level":"info","timestamp":"2023-01-24T07:39:31.325Z","Request Params":{},"Request Body":{},"Request Method":"GET"}

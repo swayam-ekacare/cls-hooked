@@ -8,9 +8,14 @@
   },
   "dependencies": {
     "cls-hooked": "^4.2.2",
+    "connect-memcached": "^2.0.0",
+    "cookie-parser": "^1.4.6",
+    "csv": "^6.2.5",
     "express": "^4.17.1",
+    "express-session": "^1.17.3",
     "install": "^0.13.0",
     "node-fetch": "^3.3.0",
+    "sumo-logger": "^2.8.1",
     "uuid": "^9.0.0",
     "winston": "^3.8.2"
   }

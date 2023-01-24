@@ -1,5 +1,6 @@
 import fetch from "node-fetch"
 
+// function to test api routes
 (function () {
     const req1 = fetch("http://localhost:3010/abc", { 
         method: 'POST', 

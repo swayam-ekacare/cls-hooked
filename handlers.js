@@ -1,28 +1,4 @@
-import { v4 } from 'uuid';
-import { applicationNamespace, REQUEST_BODY, REQUEST_ID_KEY, REQUEST_METHOD, REQUEST_PARAMS } from './namespace.js';
-
-export const attachContext = (req, res, next) => {
-  // applicationNamespace.bind(req)
-  // applicationNamespace.bind(res)
-
-  applicationNamespace.run(() => {
-    applicationNamespace.set(REQUEST_ID_KEY, v4())
-    next()
-  })
-};
-  
-let excludedRoutes = []
-
-export const setRequestInfo = (req, res, next) => {
-  if(!excludedRoutes.includes(req.path)) {
-    applicationNamespace.set(REQUEST_PARAMS, req.params);
-    applicationNamespace.set(REQUEST_BODY, req.body);
-    applicationNamespace.set(REQUEST_METHOD, req.method);
-  }
-  next();
-};
-  
-export const nestedHandler = () => {
+  export const nestedHandler = () => {
   console.log('This is a nested handler.');
 };
   
