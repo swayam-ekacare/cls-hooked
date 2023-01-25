@@ -1,7 +1,7 @@
 import { createLogger, transports, format } from 'winston'
 const { printf } = format
 
-const addReqInfo = function ({ requestInfo: { params, body, method } }, id) {
+const addReqInfo = function ({ requestInfo: { params, body, method, id } }) {
     return printf((info) => {  // here all the request info is added to the log message
     let message = info.message
 

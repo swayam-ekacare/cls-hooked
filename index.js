@@ -2,8 +2,8 @@ import { helloWorldHandler } from './handlers.js';
 import express from 'express'
 import { initLogger } from './logger.js';
 import session from 'express-session';
-import { v4 } from 'uuid';
 import cookieParser from 'cookie-parser';
+import { getId } from './util.js';
 const app = express();
 const port = 3010;
 
@@ -14,20 +14,17 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(session({
   secret: "abc",
-  genid: function(_) {
-    return v4()
-  },
   resave: true,
+  // genid: function() {
+  //   return v4()
+  // },
   saveUninitialized: true
 }))
 
-app.use((req, _, next) => {
-  req.session.requestInfo = { params: req.params, body: req.body, method: req.method }
-  next()
-})
-
-app.use((req, _, next) => {
-  initLogger(req.session, req.sessionID)
+app.all('*', (req, _, next) => {
+  const reqId = getId(req)
+  req.session.requestInfo = { id: reqId, params: req.params, body: req.body, method: req.method }
+  initLogger(req.session)
   next()
 })
 
